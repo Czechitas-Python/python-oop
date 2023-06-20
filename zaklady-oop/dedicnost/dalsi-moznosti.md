@@ -2,59 +2,6 @@
 
 Následující text popisuje další pokročilá témata, které většinou není možné během kurzu probrat, můžeš se však k nim kdykoli vrátit a prohloubit svoje znalosti.
 
-### Abstraktní třída
-
-Abstraktní třída má speciální význam v tom, že z ní rovnou **nevytváříme objekty**, je ale šablonou pro třídy, které od ní dědí.
-
-Např. uvažujme program, který počítá obvody a obsahy geometrických obrazců. Začneme vytvořením mateřské třídy `Obrazec`, která bude mít metody `vypocti_obvod()` a `vypocti_obsah()`. U neznámého obrazce ale nemá smysl do těchto tříd implementovat výpočet, protože nevíme, jaký vzorec bychom měli použít. Proto vytvoříme třídu `Obrazec` jako abstraktní třídu. To v Pythonu uděláme tak, že jí nastavíme jako mateřskou třídu třídu `ABC` z modulu `abc`. Její metody poté budou též abstraktní. To zařídíme tak, že nad ně vložíme značku `@abstractmethod`. Tato prozvláštní značka se v jazyce Pythonu označuje jako **dekorátor** (`decorator`).
-
-```python
-from abc import ABC, abstractmethod
-
-class Obrazec(ABC):
-    @abstractmethod
-    def vypocti_obvod():
-        pass
-
-    @abstractmethod
-    def vypocti_obsah():
-        pass
-```
-
-Dále přidáme třídy `Ctverec` a `Obdelnik`, které budou dědit od třídy `Obrazec`. Těmto třídám už můžeme implementovat metody `vypocti_obvod()` a `vypocti_obsah()`, založit na jejich základě objekty a pracovat s nimi.
-
-```python
-class Ctverec(Obrazec):
-    def __init__(self, a):
-        self.a = a
-
-    def vypocti_obvod(self):
-        return 4 * self.a
-
-    def vypocti_obsah(self):
-        return self.a * self.a
-
-
-class Obdelnik(Obrazec):
-    def __init__(self, a, b):
-        self.a = a
-        self.b = b
-
-    def vypocti_obvod(self):
-        return 2 * (self.a + self.b)
-
-    def vypocti_obsah(self):
-        return self.a * self.b
-
-
-maly_ctverec = Ctverec(10)
-velky_obdelnik = Obdelnik(20, 25)
-plocha_celkem = maly_ctverec.vypocti_obsah() + velky_obdelnik.vypocti_obsah()
-print(f"Celková plocha obou obrazců je {plocha_celkem}.")
-```
-
-Pokud bys chtěl(a) vytvořit objekt se třídy `Obrazec`, Python vrátí chybu "`TypeError: Can't instantiate abstract class Obrazec with abstract methods vypocti_obsah, vypocti_obvod`". Slovo `instance` označuje pojem "instance objektové třídy", což je jen jiný výraz pro model.
-
 ### Funkce `isinstance()`
 
 Abstraktní třída je výhodná v kombinaci s funkcí `isinstance()`. Ta vrací pravdivostní hodnotu (`bool`). Funkce ověří, zda je objekt založený na nějaké třídě. Založený může být i nepřímo. Například pokud vytvoříme objekt `neznamy_obrazec` ze třídy `Ctverec`, funkce `isinstance()` vrátí hodnotu `True`, pokud jako ověřovanou třídu vložíme `Ctverec`, ale i pokud vložíme třídu `Obrazec`.
