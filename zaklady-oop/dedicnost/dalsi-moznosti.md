@@ -2,19 +2,6 @@
 
 Následující text popisuje další pokročilá témata, které většinou není možné během kurzu probrat, můžeš se však k nim kdykoli vrátit a prohloubit svoje znalosti.
 
-### Funkce `isinstance()`
-
-Abstraktní třída je výhodná v kombinaci s funkcí `isinstance()`. Ta vrací pravdivostní hodnotu (`bool`). Funkce ověří, zda je objekt založený na nějaké třídě. Založený může být i nepřímo. Například pokud vytvoříme objekt `neznamy_obrazec` ze třídy `Ctverec`, funkce `isinstance()` vrátí hodnotu `True`, pokud jako ověřovanou třídu vložíme `Ctverec`, ale i pokud vložíme třídu `Obrazec`.
-
-Uvažujme nyní, že máme u nějakého objektu vypsat jeho obvod. Chceme to ale provést bezpečně, tj. chceme ověřit, že je přítomná metoda `vypocti_obsah()` a že daný objekt skutečně reprezentuje nějaký dvourozměrný odstavec. Využijeme tedy funkci `isinstance()`.
-
-```python
-neznamy_obrazec = Ctverec(10)
-if isinstance(neznamy_obrazec, Obrazec):
-    print(f"Obvod obrazce je {neznamy_obrazec.vypocti_obsah()}")
-else:
-    print("Objekt není dvourozměrný odstavec.")
-```
 
 ### Vlastnosti objektu
 

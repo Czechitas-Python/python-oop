@@ -26,7 +26,7 @@ class Employee:
     def __str__():
         return f"Zaměstnanec {self.name} pracuje na pozici {self.position}."
 
-    def taky_holiday(self, days):
+    def take_holiday(self, days):
         if self._holiday_entitlement >= days:
             self._holiday_entitlement -= days
             return f"Užij si to."
@@ -37,3 +37,6 @@ frantisek = Employee("František Novák", "konstruktér", 25)
 print(str(frantisek))
 ```
 
+## Cvičení
+
+::exc[excs>balik-3]
