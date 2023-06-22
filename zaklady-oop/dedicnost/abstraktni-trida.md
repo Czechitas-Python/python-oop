@@ -52,3 +52,53 @@ print(f"Celková plocha obou obrazců je {plocha_total_areacelkem}.")
 ```
 
 Pokud bys chtěl(a) vytvořit objekt se třídy `Figure`, Python vrátí chybu "`TypeError: Can't instantiate abstract class Figure with abstract methods get_area, get_circ`". Slovo `instance` označuje pojem "instance objektové třídy", což je jen jiný výraz pro model.
+
+### Abstraktní třídy a vlastnosti
+
+U našich obrazců máme implementované metody metody `vypocti_obvod()` a `vypocti_obsah()`. Obvod a obsah jsou hodnoty, které jsou pro nějaký obrazec konkrétní velikosti konstantní. Bylo by tedy zajímavé pro ně použít vlastnosti. Jíž víme, že vlastnosti označíme pomocí dekorátoru `@property`. U abstraktní třídy pak použijeme speciální dekorátor `@abstractproperty`.
+
+```python
+from abc import ABC, abstractproperty
+
+class Obrazec(ABC):
+    @abstractproperty
+    def obvod():
+        pass
+
+    @abstractproperty
+    def obsah():
+        pass
+
+class Ctverec(Obrazec):
+    def __init__(self, a):
+        self.a = a
+
+    @property
+    def obvod(self):
+        return 4 * self.a
+
+    @property
+    def obsah(self):
+        return self.a * self.a
+
+
+class Obdelnik(Obrazec):
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    @property
+    def obvod(self):
+        return 2 (self.a + self.b)
+
+    @property
+    def obsah(self):
+        return self.a * self.b
+
+
+maly_ctverec = Ctverec(10)
+velky_obdelnik = Obdelnik(20, 25)
+plocha_celkem = maly_ctverec.obsah + velky_obdelnik.obsah
+print(f"Celková plocha obou obrazců je {plocha_celkem}.")
+```
+
