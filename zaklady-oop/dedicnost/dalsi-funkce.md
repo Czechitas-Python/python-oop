@@ -6,11 +6,13 @@ Funkce `isinstance()` vrátí hodnnotu `True` i v případě, že objekt pocház
 
 ```python
 boss = Manager("Marian Přísný", "vedoucí konstrukčního oddělení", 25, 5)
+# Podmínka bude vyhodnocena jako pravda
 if isinstance(boss, Manager):
     print("Objekt pochází ze třídy Manager (nebo jejích potomků).")
 else:
     print("Objekt nepochází ze třídy Manager (nebo jejích potomků).")
 
+# Podmínka bude vyhodnocena jako pravda (třída Manager dědí od třídy Employee)
 if isinstance(boss, Employee):
     print("Objekt pochází ze třídy Employee (nebo jejích potomků).")
 else:
@@ -39,7 +41,9 @@ expected_people = 0
 
 for item in employee_list:
     if hasattr(marketa, "subordinates"):
-        print(f"Pozvánka pro {marketa.name} na školení leadershipu.")
+        # Připravíme si pozvánku
+        print(f"Pozvánka pro {item.name} na školení leadershipu.")
+        # Započítáme si jednoho člověka navíc
         expected_people = expected_people + 1
 
 print(f"Čekáme {expected_people} osob.")

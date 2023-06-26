@@ -1,12 +1,13 @@
 ## Dědičnost
 
-Třídy mají jednu zajímavou vlastnost - mohou od sebe **dědit**. Uvažujme třeba, že bychom chtěli vytvořit novou třídu `Manager`, která reprezentuje zaměstnance, který má nějaké podřízené. U manažera bychom rádi evidovali počet jeho podřízených. Jinak se samozřejmě manažer od ostatních nijak neliší - má jméno, název position i nárok na dovolenou.
+Třídy mají jednu zajímavou vlastnost - mohou od sebe **dědit**. Uvažujme třeba, že bychom chtěli vytvořit novou třídu `Manager`, která reprezentuje zaměstnance, který má nějaké podřízené. U manažera bychom rádi evidovali počet jeho podřízených. Jinak se samozřejmě manažer od ostatních nijak neliší - má jméno, pozici i nárok na dovolenou.
 
-Ideální by tedy bylo mít kopii třídy `Employee`, která bude mít nový atribut `subordinates` (seznam jeho podřízených). Samozřejmě bychom mohli kód třídy `Employee` zkopírovat a upravit, ale díky dědičnosti to můžeme udělat i lépe. Můžeme novou třídu `Manager` postavit na základě třídy `Employee`. Třída `Manager` tak zdědí od třídy `Employee` všechny atributy a metody, a my jen přidáme nebo upravíme, co potřebujeme.
+Ideální by tedy bylo mít kopii třídy `Employee`, která bude mít nový atribut `subordinates` (seznam jeho podřízených). Samozřejmě bychom mohli kód třídy `Employee` zkopírovat a upravit, ale díky dědičnosti to můžeme udělat i efektivněji. Můžeme novou třídu `Manager` postavit na základě třídy `Employee`. Třída `Manager` tak zdědí od třídy `Employee` všechny atributy a metody, a my jen přidáme nebo upravíme, co potřebujeme.
 
 Napíšeme tedy novou funkci `__init__`, protože potřebujeme vytvořit atribut `subordinates`.
 
 ```py
+# Do závorek píšeme, od jaké třídy dědíme
 class Manager(Employee):
     def __init__(self, name, position, holiday_entitlement, subordinates):
         self.name = name
@@ -29,6 +30,7 @@ Ve skutečnosti ano. Využijeme k tomu speciální funkci `super()`, kterou se o
 ```py
 class Manager(Employee):
     def __init__(self, name, position, holiday_entitlement, subordinates):
+        # Volám metodu __init__() mateřské třídy
         super().__init__(name, position)
         self.subordinates = subordinates
 ```
@@ -42,6 +44,7 @@ class Manager(Employee):
         self.subordinates = subordinates
 
     def __str__(self):
+        # Volám metodu __str__() mateřské třídy a k výsledku přidávám další řetězec
         return super().__str__() + f" Má {self.subordinates} podřízených."
 ```
 
