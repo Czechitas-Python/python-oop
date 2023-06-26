@@ -102,3 +102,7 @@ plocha_celkem = maly_ctverec.obsah + velky_obdelnik.obsah
 print(f"Celková plocha obou obrazců je {plocha_celkem}.")
 ```
 
+## Cvičení: Abstraktní třídy
+
+::exc[excs>jizdenky-letenky]
+

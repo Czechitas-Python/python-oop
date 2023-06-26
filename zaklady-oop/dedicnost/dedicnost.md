@@ -38,11 +38,11 @@ Pojďme ještě upravit výpis informace pomocí metody `__str__`. U třídy `Ma
 ```py
 class Manager(Employee):
     def __init__(self, name, position, holiday_entitlement, subordinates):
-        super().__init__(name, position)
-        self.pocet_podrizenych = pocet_podrizenych
+        super().__init__(name, position, holiday_entitlement)
+        self.subordinates = subordinates
 
     def __str__(self):
-        return super().__str__() + f" Má {self.pocet_podrizenych} podřízených."
+        return super().__str__() + f" Má {self.subordinates} podřízených."
 ```
 
 Vyzkoušíme znovu dvojici příkazů, kterou jsme zkoušeli předtím.
@@ -59,4 +59,5 @@ Marian Přísný pracuje na pozici vedoucí konstrukčního oddělení. Má 5 po
 ```
 
 ## Cvičení: Dědičnost
+
 ::exc[excs>cenny-balik]
