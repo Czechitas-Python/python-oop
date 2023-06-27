@@ -29,7 +29,7 @@ employee_1["holiday_entitlement"] = employee_1["holiday_entitlement"] - 10
 Tento řádek kódu sice sníží nárok na dovolenou, před schválením dovolené a snížení nároku je ale vhodné zkontrolovat, jestli se už zaměstnanec nedostane čerpáním "do mínusu". K tomu můžeme využít podmínku.
 
 ```py
-days = int(input("Zadejte počet dní dovolené: "))
+days = 10
 if days > employee_1["holiday_entitlement"]:
     employee_1["holiday_entitlement"] = employee_1["holiday_entitlement"] - days
     print("Dovolená schválena.")
@@ -48,8 +48,7 @@ def holiday_request(days):
         print("Na tolik dní už nemáš nárok.")
 
 employee_1 = {"name": "Jan Novák", "position": "konstruktér", "holiday_entitlement": 25}
-days = int(input("Zadejte počet dní dovolené: "))
-holiday_request(days)
+holiday_request(10)
 ```
 
 Tím máme náš program hotový. Má však několik nevýhod, které nám budou komplikovat život při jeho rozšiřování.
