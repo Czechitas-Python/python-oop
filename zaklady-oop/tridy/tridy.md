@@ -18,6 +18,8 @@ Před vytvářením objektů je třeba mít připravenou třídu, na základě k
 
 Jako první vytvoříme speciální metodu s podivným názvem `__init__()`. Tato metoda se stará o vytvoření objektu a nastavení hodnot jeho atributů. Metoda má čtyři parametry: `self`, `name`, `position` a `holiday_entitlement`. Kromě záhadného `self` jsou to hodnoty, které budeme chtít zadat při vytvoření nového objektu.
 
+::fig[Třída a objekty]{src=assets/trida_objekty.png}
+
 K čemu sloučí parametr `self`? S jeho pomocí **přistupujeme k atributům objektu**. Existuje totiž zásadní rozdíl mezi `name` a `self.name`. Zatímco `name` je parametr funkce a po opuštění metody `__init__()` zmizí, `self.name` je atribut objektu, který může být používán ve všech metodách. Naším cílem je uložit jméno, které uživateli zadáme, do atributu, abychom s ním mohli pracovat v ostatních metodách. Proto napíšeme absurdně vypadající řádek `self.name = name`.
 
 ```py
