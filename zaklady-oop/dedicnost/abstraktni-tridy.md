@@ -1,4 +1,4 @@
-## Čtení na doma: Abstraktní třída
+## Čtení na doma: Abstraktní třídy
 
 Abstraktní třída má speciální význam v tom, že z ní rovnou **nevytváříme objekty**, je ale šablonou pro třídy, které od ní dědí.
 

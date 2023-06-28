@@ -1,4 +1,4 @@
-## Čtení na doma - datové třídy
+## Datové třídy
 
 Obsah metody `__init__` je příklad `boilerplate code`. Název se odkazuje na kovové štítky, které jsou umístěny na bojlerech. V programování to znamená kód, který se často opakuje bez nějakých velkých změn.
 
@@ -29,4 +29,3 @@ print(frantisek.take_holiday(15))
 print(frantisek.take_holiday(10))
 ```
 
-Více o datových třídách najdeš v [v dokumentaci](https://docs.python.org/3/library/dataclasses.html).
