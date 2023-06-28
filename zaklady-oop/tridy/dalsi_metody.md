@@ -1,6 +1,6 @@
 ## Další metody
 
-Oproti motivačnímu příkladu stále nemáme vyřešeno "bezpečné" čerpání dovolené. Na to se podíváme nyní. Zkusme nyní naši třídu obohatit o novou metodu - `taky_holiday()`. Budeme hlídat i to, aby zaměstnanec/zaměstnankyně nárok na dovolenou nepřečerpal(a).
+Oproti motivačnímu příkladu stále nemáme vyřešeno "bezpečné" čerpání dovolené. Na to se podíváme nyní. Zkusme nyní naši třídu obohatit o novou metodu - `take_holiday()`. Budeme hlídat i to, aby zaměstnanec/zaměstnankyně nárok na dovolenou nepřečerpal(a).
 
 ```py
 class Employee:
@@ -8,11 +8,11 @@ class Employee:
         self.name = name
         self.position = position
         self.holiday_entitlement = holiday_entitlement
-    
-    def get_info():
+
+    def get_info(self):
         return f"Zaměstnanec {self.name} pracuje na pozici {self.position}."
 
-    def taky_holiday(self, days):
+    def take_holiday(self, days):
         if self.holiday_entitlement >= days:
             self.holiday_entitlement -= days
             return f"Užij si to."
@@ -25,9 +25,9 @@ Nyní se podívejme, jak budou vyřizovány Františkovy žádosti o dovolenou.
 ```py
 frantisek = Employee("František Novák", "konstruktér", 25)
 
-print(frantisek.taky_holiday(5))
-print(frantisek.taky_holiday(15))
-print(frantisek.taky_holiday(10))
+print(frantisek.take_holiday(5))
+print(frantisek.take_holiday(15))
+print(frantisek.take_holiday(10))
 ```
 
 Pojďme ještě použití naší třídy trochu zjednodušit. Naše třída umí přehledně vypsat informace díky metodě `get_info()`. Třídu ale může používat někdo, kdo si této metody nevšimne a tak intuitivně vyzkouší funkci `print()`.
@@ -52,8 +52,8 @@ class Employee:
         self.name = name
         self.position = position
         self.holiday_entitlement = holiday_entitlement
-    
-    def __str__():
+
+    def __str__(self):
         return f"Zaměstnanec {self.name} pracuje na pozici {self.position}."
 
     def taky_holiday(self, days):
@@ -61,7 +61,7 @@ class Employee:
             self.holiday_entitlement -= days
             return f"Užij si to."
         else:
-            return f"Bohužel už máš nárok jen na {self.pocet_dni_dovolene} dní."
+            return f"Bohužel už máš nárok jen na {self.holiday_entitlement} dní."
 
 frantisek = Employee("František Novák", "konstruktér", 25)
 print(str(frantisek))
