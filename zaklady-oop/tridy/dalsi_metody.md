@@ -17,7 +17,7 @@ class Employee:
             self.holiday_entitlement -= days
             return f"Užij si to."
         else:
-            return f"Bohužel už máš nárok jen na {self.pocet_dni_dovolene} dní."
+            return f"Bohužel už máš nárok jen na {self.holiday_entitlement} dní."
 ```
 
 Nyní se podívejme, jak budou vyřizovány Františkovy žádosti o dovolenou.
@@ -56,7 +56,7 @@ class Employee:
     def __str__(self):
         return f"Zaměstnanec {self.name} pracuje na pozici {self.position}."
 
-    def taky_holiday(self, days):
+    def take_holiday(self, days):
         if self.holiday_entitlement >= days:
             self.holiday_entitlement -= days
             return f"Užij si to."
@@ -64,7 +64,7 @@ class Employee:
             return f"Bohužel už máš nárok jen na {self.holiday_entitlement} dní."
 
 frantisek = Employee("František Novák", "konstruktér", 25)
-print(str(frantisek))
+print(frantisek)
 ```
 
 Tím jsme si ukázali, jak vytvořit třídu, objekty a jak s nimi pracovat.
