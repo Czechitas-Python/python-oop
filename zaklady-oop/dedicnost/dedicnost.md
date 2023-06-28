@@ -64,3 +64,8 @@ Marian Přísný pracuje na pozici vedoucí konstrukčního oddělení. Má 5 po
 ## Cvičení: Dědičnost
 
 ::exc[excs>cenny-balik]
+
+## Bonusy
+
+::exc[excs>jizdenky-letenky]
+::exc[excs>cena-prepravy]

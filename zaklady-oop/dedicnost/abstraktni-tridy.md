@@ -1,4 +1,4 @@
-## Abstraktní třída
+## Čtení na doma: Abstraktní třídy
 
 Abstraktní třída má speciální význam v tom, že z ní rovnou **nevytváříme objekty**, je ale šablonou pro třídy, které od ní dědí.
 
@@ -54,10 +54,6 @@ print(f"Celková plocha obou obrazců je {plocha_total_areacelkem}.")
 ```
 
 Pokud bys chtěl(a) vytvořit objekt se třídy `Figure`, Python vrátí chybu "`TypeError: Can't instantiate abstract class Figure with abstract methods get_area, get_circ`". Slovo `instance` označuje pojem "instance objektové třídy", což je jen jiný výraz pro model.
-
-## Cvičení: Abstraktní třídy
-
-::exc[excs>jizdenky-letenky]
 
 ### Čtení na doma: Abstraktní třídy a vlastnosti
 

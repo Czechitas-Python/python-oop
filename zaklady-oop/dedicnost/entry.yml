@@ -3,5 +3,6 @@ lead: V objektově orientovaném programování existuje důležitý pojem, kter
 sections:
   - dedicnost
   - dalsi-funkce
-  - abstraktni-trida
+  - datove-tridy
   - dunder-metody
+  - abstraktni-tridy
