@@ -65,8 +65,8 @@ print(klara.get_info())
 
 ## Cvičení
 
-::exc[excs>balik]
+::exc[excs/balik]
 
 ## Bonus
 
-::exc[excs>kniha]
+::exc[excs/kniha]

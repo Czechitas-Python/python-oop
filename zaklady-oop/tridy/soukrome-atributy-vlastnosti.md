@@ -65,7 +65,7 @@ print(f"Na účet pana Nováka pošleme {frantisek.net_salary} Kč.")
 
 ## Cvičení
 
-::exc[excs>balik-3]
+::exc[excs/balik-3]
 
 ### Soukromé metody
 

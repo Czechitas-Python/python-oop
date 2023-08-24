@@ -51,8 +51,8 @@ print(f"Čekáme {expected_people} osob.")
 
 ## Cvičení: Dědičnost
 
-::exc[excs>seznam-baliku]
+::exc[excs/seznam-baliku]
 
 ## Bonus
 
-::exc[excs>seznam-baliku-podruhe]
+::exc[excs/seznam-baliku-podruhe]

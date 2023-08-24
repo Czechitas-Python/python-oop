@@ -71,9 +71,9 @@ Tím jsme si ukázali, jak vytvořit třídu, objekty a jak s nimi pracovat.
 
 ## Cvičení
 
-::exc[excs>balik-2]
+::exc[excs/balik-2]
 
 ## Bonus
 
-::exc[excs>kniha-2]
-::exc[excs>zkusebka]
+::exc[excs/kniha-2]
+::exc[excs/zkusebka]
