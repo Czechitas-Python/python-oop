@@ -1,4 +1,4 @@
-## Čtení na doma: Soukromé atributy a vlastnosti
+## Soukromé atributy a vlastnosti
 
 Nyní se podíváme na další dva aspekty objektově orientovaného programování: soukromé atributy a vlastnosti
 
@@ -16,7 +16,7 @@ Stejně tak je možné provést snížení hodnoty.
 frantisek.holiday_entitlement = frantisek.holiday_entitlement - 10
 ```
 
-Většina objektově orientovaných jazyků umožňuje vytvořit tvz. soukromé atributy, které nejde měnit zvenku, ale pouze prostřednictvím method. Autoři jazyk Python se však rozhodli dát vývojářům a vývojářkám svobodu atributy objektu měnit libovolně. Můžeme ale vytvořit tzv. soukromý atribut. Soukromý atribut se vyznačuje tím, že jeho název začíná s podtržítkem. Sice je pořád možné měnit jej přímo, dáváme tím ale jasně najevo, že by se to **dělat nemělo**. Tento přístup funguje v realitě docela dobře, protože dnes je možné dohledat autora (autorku) každého řádku zdrojového kódu, takže si všichni dávají pozor, aby atributy měnili přímo pouze v případech krajní nouze.
+Většina objektově orientovaných jazyků umožňuje vytvořit tvz. soukromé atributy, které nejde měnit zvenku, ale pouze prostřednictvím method. Soukromé atributy se označují slovem `private`, veřejné atributy slovem `public`. Soukromé atributy je pak možné měnit pouze s využitím metod dané třídy. Autoři jazyk Python se však rozhodli dát vývojářům a vývojářkám svobodu atributy objektu měnit libovolně. Můžeme ale vytvořit tzv. soukromý atribut. Soukromý atribut se vyznačuje tím, že jeho název začíná s podtržítkem. Sice je pořád možné měnit jej přímo, dáváme tím ale jasně najevo, že by se to **dělat nemělo**. Tento přístup funguje v realitě docela dobře, protože dnes je možné dohledat autora (autorku) každého řádku zdrojového kódu, takže si všichni dávají pozor, aby atributy měnili přímo pouze v případech krajní nouze.
 
 ```py
 class Employee:
