@@ -49,7 +49,7 @@ for item in employee_list:
 print(f"Čekáme {expected_people} osob.")
 ```
 
-## Cvičení: Dědičnost
+## Cvičení
 
 ::exc[excs/seznam-baliku]
 
