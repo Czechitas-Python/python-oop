@@ -40,7 +40,7 @@ employee_list = [marketa, stefan]
 expected_people = 0
 
 for item in employee_list:
-    if hasattr(marketa, "subordinates"):
+    if hasattr(item, "subordinates"):
         # Připravíme si pozvánku
         print(f"Pozvánka pro {item.name} na školení leadershipu.")
         # Započítáme si jednoho člověka navíc
