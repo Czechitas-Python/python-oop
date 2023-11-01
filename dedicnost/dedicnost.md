@@ -67,5 +67,5 @@ Marian Přísný pracuje na pozici vedoucí konstrukčního oddělení. Má 5 po
 
 ## Bonusy
 
-::exc[excs/jizdenky-letenky]
 ::exc[excs/cena-prepravy]
+::exc[excs/jizdenky-letenky]
