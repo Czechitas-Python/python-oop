@@ -77,3 +77,4 @@ Tím jsme si ukázali, jak vytvořit třídu, objekty a jak s nimi pracovat.
 
 ::exc[excs/kniha-2]
 ::exc[excs/zkusebka]
+::exc[excs/seznam-baliku]
