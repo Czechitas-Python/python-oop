@@ -1,5 +1,5 @@
 ---
-title: Seznam balíků podruhé
+title: Celková hodnota balíků podruhé
 demand: 3
 ---
 
