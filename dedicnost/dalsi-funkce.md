@@ -1,6 +1,6 @@
 ## Funkce pro práci s objekty
 
-### Funkce isinstance
+### Funkce `isinstance()`
 
 Často potřebujeme v programu zkontrolovat, zda nějaká funkce je objektem určité třídy. V opačném případě se může stát, že budeme volat metodu, kterou objekt vůbec nemá, protože pochází z jiné třídy, než jsme předpokládali. K tomu slouží funkce `isinstance()`. Ta ověří, zda je objekt založený na nějaké třídě, a vrátí pravdivostní hodnotu. Jako parametry funkce zadáváme objekt a třídu, u které prověřujeme, zda z ní projekt pochází.
 
