@@ -2,8 +2,8 @@ title: Dědičnost
 lead: V objektově orientovaném programování existuje důležitý pojem, kterým je dědičnost. Podíváme se, jak funguje.
 sections:
   - dedicnost
-  - dalsi-funkce
   - datove-tridy
+  - dalsi-funkce
   - dunder-metody
   - abstraktni-tridy
   - priklad-pouziti
