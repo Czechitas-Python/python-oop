@@ -54,7 +54,7 @@ print(f"Čekáme {expected_people} osob.")
 
 ### Funkce hasattr
 
-Další funkce je funkce `hasattr()`. Ta nám umožňuje zkontrolovat, zda má nějaký objekt atribut nebo metodu daného jména. Přidejme si do našeho programu ještě jednu třídu, která se bude jmenovat `Salesman`. Tato třída reprezentuje zaměstnance (zaměstnankyni), která se zabývá prodejem. Všichni tito zaměstnanci potřebují služební auto, aby mohli jezdit na obchodní schůzky. Vytvoříme tedy třídu `Salesman`, která bude mít atribut `car` (stejně jako třída `Manager`), ale nebude mít atribut `suobordinates`.
+Další funkce je funkce `hasattr()`. Ta nám umožňuje zkontrolovat, zda má nějaký objekt atribut nebo metodu daného jména. Přidejme si do našeho programu ještě jednu třídu, která se bude jmenovat `Salesman`. Tato třída reprezentuje zaměstnance (zaměstnankyni), která se zabývá prodejem. Všichni tito zaměstnanci potřebují služební auto, aby mohli jezdit na obchodní schůzky. Vytvoříme tedy třídu `Salesman`, která bude mít atribut `car` (stejně jako třída `Manager`), ale nebude mít atribut `subordinates`.
 
 ```py
 class Salesman(Employee):
@@ -74,6 +74,7 @@ jakub = Salesman("Jakub Čmelák", "business development manager", 25, "Škoda O
 employee_list = [marian, marketa, frantisek, jakub]
 
 for item in employee_list:
+    # Skončí chybou pro objekt frantisek
     print(item.car)
 ```
 
@@ -81,6 +82,7 @@ Ten bohužel skončí chybou `AttributeError`, protože objekt `frantisek` atrib
 
 ```py
 for item in employee_list:
+    # Vyhodnoceno jako nepravda pro objekt frantisek
     if hasattr(item, "car"):
         print(item.car)
 ```

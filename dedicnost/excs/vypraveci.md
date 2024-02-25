@@ -8,7 +8,7 @@ Nyní se vrátíme k práci pro nakladatelství, pro které jsme již připravil
 ```py
 favourite_narrator = "Zbyšek Horák"
 item_1 = AudioBook("Problém tří těles", 299, 14.4, "Zbyšek Horák")
-item_2 = Book("Kadet Hornblower" 399, 242)
+item_2 = Book("Kadet Hornblower", 399, 242)
 item_3 = AudioBook("Odysseus", 389, 13.7, "Lukáš Hlavica")
 
 all_items = [item_1, item_2, item_3]
