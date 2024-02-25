@@ -16,5 +16,5 @@ package_list = [package_1, package_2, package_3]
 
 - Vytvoř si proměnnou `total_value`, do které si s využitím cyklu budeš ukládat celkovou hodnotu všech balíků. Na začátku bude mít hodnotu 0.
 - Vytvoř cyklus, který projde seznam `package_list`.
-- Pro každý objekt ze seznamu nejprve zkontroluje, zda má atribut `value`. Pokud ano, připočti hodnotu balíku k proměnné `total_value`.
+- Vyber funkci, která je podle tebe nejvhodnější pro zajištění bezpečného čtení atributu `value`. Můžeš použít funkci `isinstance()`, `hasattr()` i `getattr()`. Přičti hodnotu balíku k proměnné `total_value`, aniž by program skončil chybou u objektu `package_2`.
 - Na konci programu vypiš, jaká je celková hodnota balíků v autě.
