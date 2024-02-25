@@ -120,3 +120,4 @@ print(auto)
 ## Bonus
 
 ::exc[excs/seznam-baliku-podruhe]
+::exc[excs/vypraveci]
