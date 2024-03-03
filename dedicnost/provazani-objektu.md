@@ -28,6 +28,8 @@ print(frantisek)
 
 ::exc[excs/auta-a-baliky]
 
+### Provázání pomocí seznamu
+
 Zamětnance a objekty je možné provázat i obráceně, můžeme každému manažerovi vytvořit seznam jeho podřízených. K provázání objektů můžeme použít seznamy. Atribut `subordinates` nahradíme atributem `subordinates_list`, do kterého v metodě `__init__()` uložíme prázdný seznam. Tento seznam pak budeme plnit s využitím metody `add_subordinate()`. Metoda přijme nového zaměstnance jako parametr `subordinate` a pomocí metody `append()` ho vloží do seznamu `subordinates_list`. Dále přidáme metodu `get_subordinates()`, která vypíše jména všech podřízených ze seznamu `subordinates_list`.
 
 ```py
