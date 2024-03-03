@@ -1,4 +1,4 @@
-## Čtení na doma: Dvojité podtržítko a nepovinné parametry
+## Dvojité podtržítko a nepovinné parametry
 
 V této části si vysvětlíme dva pojmy, se kterými se v rámci objektově orientovaného programování setkáte.
 

@@ -54,14 +54,14 @@ class Manager(Employee):
 Vyzkoušíme znovu dvojici příkazů, kterou jsme zkoušeli předtím.
 
 ```py
-marian = Manager("Marian Přísný", "vedoucí konstrukčního oddělení", 25, 5)
+marian = Manager("Marian Přísný", "vedoucí konstrukčního oddělení", 25, 2, "Škoda Octavia")
 print(marian)
 ```
 
 Výsledkem je text:
 
 ```
-Marian Přísný pracuje na pozici vedoucí konstrukčního oddělení. Má 5 podřízených.
+Marian Přísný pracuje na pozici vedoucí konstrukčního oddělení. Má 2 podřízených.
 ```
 
 ## Cvičení: Dědičnost
