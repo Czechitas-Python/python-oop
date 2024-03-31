@@ -20,7 +20,7 @@ Jako první vytvoříme speciální metodu s podivným názvem `__init__()`. Tat
 
 ::fig[Třída a objekty]{src=assets/trida_objekty.png}
 
-K čemu sloučí parametr `self`? S jeho pomocí **přistupujeme k atributům objektu**. Existuje totiž zásadní rozdíl mezi `name` a `self.name`. Zatímco `name` je parametr funkce a po opuštění metody `__init__()` zmizí, `self.name` je atribut objektu, který může být používán ve všech metodách. Naším cílem je uložit jméno, které uživateli zadáme, do atributu, abychom s ním mohli pracovat v ostatních metodách. Proto napíšeme absurdně vypadající řádek `self.name = name`.
+K čemu slouží parametr `self`? S jeho pomocí **přistupujeme k atributům objektu**. Existuje totiž zásadní rozdíl mezi `name` a `self.name`. Zatímco `name` je parametr funkce a po opuštění metody `__init__()` zmizí, `self.name` je atribut objektu, který může být používán ve všech metodách. Naším cílem je uložit jméno, které uživateli zadáme, do atributu, abychom s ním mohli pracovat v ostatních metodách. Proto napíšeme absurdně vypadající řádek `self.name = name`.
 
 ```py
 class Employee:
