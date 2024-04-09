@@ -12,7 +12,7 @@ class Manager(Employee):
     def __init__(self, name, position, holiday_entitlement, subordinates, car):
         self.name = name
         self.position = position
-        self._holiday_entitlement = holiday_entitlement
+        self.holiday_entitlement = holiday_entitlement
         self.subordinates = subordinates
         self.car = car
 ```
