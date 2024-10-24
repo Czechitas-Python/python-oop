@@ -21,4 +21,12 @@ class Package:
 
     def __str__(self):
         return f"Balík na adresu {self.address} má hmotnost {self.weight} kg a je ve stavu {self.state}."
+
+    def delivery_price(self):
+        if self.weight < 10:
+            return 129
+        elif self.weight < 20:
+            return 159
+        else:
+            return 359
 ```
