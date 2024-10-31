@@ -32,7 +32,7 @@ class Package:
         return f"Balík na adresu {self.address} má hmotnost {self.weight} kg a je ve stavu {self.state}."
 
 class ValuablePackage(Package):
-    def __init__(self, address, weight, value, state="nedoručen"):
+    def __init__(self, address, weight, state, value):
         super().__init__(address, weight, state)
         self.value = value
 
