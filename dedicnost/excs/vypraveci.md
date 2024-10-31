@@ -31,13 +31,11 @@ class Book(Item):
         return f"Kniha '{self.title}' má {self.pages} stran a stojí {self.price} Kč."
     def get_time_to_read(self):
         return self.pages * 4 / 60
-class AudioBoo(Item):
+class AudioBook(Item):
     def __init__(self, title, price, duration_in_hours, narrator):
         super().__init__(title, price)
         self.duration_in_hours = duration_in_hours
         self.narrator = narrator
     def get_time_to_read(self):
         return self.duration_in_hours
-book_1 = Book("Kadet Hornblower", 399, 242)
-audiobook_1 = AudioBook("Problém tří těles", 299, 14.4, "Zbyšek Horák")
 ```
