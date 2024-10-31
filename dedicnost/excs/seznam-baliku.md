@@ -18,3 +18,24 @@ package_list = [package_1, package_2, package_3]
 - Vytvoř cyklus, který projde seznam `package_list`.
 - Vyber funkci, která je podle tebe nejvhodnější pro zajištění bezpečného čtení atributu `value`. Můžeš použít funkci `isinstance()`, `hasattr()` i `getattr()`. Přičti hodnotu balíku k proměnné `total_value`, aniž by program skončil chybou u objektu `package_2`.
 - Na konci programu vypiš, jaká je celková hodnota balíků v autě.
+
+Pokud nemáš naprogramované třídy `Package` a/nebo `ValuablePackage`, můžeš využít kód níže.
+
+```py
+class Package:
+    def __init__(self, address, weight, state):
+        self.address = address
+        self.weight = weight
+        self.state = state
+
+    def get_info(self):
+        return f"Balík na adresu {self.address} má hmotnost {self.weight} kg a je ve stavu {self.state}."
+
+class ValuablePackage(Package):
+    def __init__(self, address, weight, value, state="nedoručen"):
+        super().__init__(address, weight, state)
+        self.value = value
+
+    def __str__(self):
+        return super().__str__() +  f"Balík má hodnotu hodnotu {self.value} Kč."
+```
