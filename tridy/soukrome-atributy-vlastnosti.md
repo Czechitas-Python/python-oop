@@ -1,4 +1,4 @@
-## Soukromé atributy a vlastnosti
+## Čtení na doma: Soukromé atributy a vlastnosti
 
 Nyní se podíváme na další dva aspekty objektově orientovaného programování: soukromé atributy a vlastnosti
 
