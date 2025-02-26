@@ -19,7 +19,7 @@ package_list = [package_1, package_2, package_3]
 
 Zatím jsme uvažovali, že třídu `Package` využívá ve svém programu přepravní společnost. Stejnou třídu by ale mohl používat e-shop, který takto eviduje zboží odeslané zákazníkům. Provozovatele e-shopu bude určitě zajímat, kolik celkem zaplatí přepravní společnosti za přepravu balíku. Využij tedy balíky v seznamu `package_list` a spočítej celkové náklady na jejich přepravu. Náklady na přepravu jednoho balíku zjistíš voláním metody `delivery_price()`.
 
-:::solultion
+:::solution
 ```py
 class Package:
     def __init__(self, address, weight, state):
