@@ -31,4 +31,4 @@ print(frantisek.take_holiday(10))
 
 ## Cvičení: Datové třídy
 
-::exc[excs/balik-datova-trida]
+::exc[excs/streamovaci-sluzba]
