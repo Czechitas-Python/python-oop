@@ -45,9 +45,9 @@ class Book:
         return (self.price - self.costs) * self.sold
     
     def rating(self):
-        if self.sold < 50000:
+        if self.profit() < 50000:
             return "propadák"
-        elif self.sold < 500000:
+        elif self.profit() < 500000:
             return "průměr"
         else:
             return "bestseller"
