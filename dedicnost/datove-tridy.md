@@ -29,6 +29,20 @@ print(frantisek.take_holiday(15))
 print(frantisek.take_holiday(10))
 ```
 
+### Dědičnost
+
+V datových třídách můžeme využívat i dědičnost. Potomek též musí mít `@dataclass`, ale atributy rodiče opakovat nemusíme. Komplikací jsou atributy s výchozí hodnotou u rodiče, v našem případě tedy `holiday_entitlement`. Situaci si výrazně zjednodušíme tím, že výchozí hodnotu odebereme. Poté bude bez problémů fungovat datová třída `Manager`.
+
+```py
+@dataclass
+class Manager(Employee):
+    subordinates: int
+    car: str
+
+    def __str__(self):
+        return super().__str__() + f" Má {self.subordinates} podřízených."
+```
+
 ## Cvičení: Datové třídy
 
 ::exc[excs/streamovaci-sluzba]
